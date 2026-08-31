@@ -168,6 +168,10 @@ article.post li{ margin-bottom:0.4em; }
   background:var(--accent-soft); border-radius:10px; padding:16px 20px; margin:28px 0;
   font-size:0.86rem; color:var(--ink-soft); max-width:70ch;
 }
+.affiliate-note{
+  font-size:0.82rem; color:var(--ink-soft); border-left:3px solid var(--line);
+  padding:4px 0 4px 12px; margin:4px 0 24px; max-width:70ch;
+}
 .author-box{
   display:flex; gap:16px; align-items:flex-start;
   border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin:44px 0;
