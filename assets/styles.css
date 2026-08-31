@@ -184,6 +184,15 @@ article.post li{ margin-bottom:0.4em; }
 
 .related{ margin:56px 0; }
 
+.sources{
+  border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px;
+  margin:36px 0; max-width:70ch; background:var(--surface);
+}
+.sources h2{ margin-top:0 !important; font-size:1.05rem !important; }
+.sources ol{ padding-left:1.2em; margin:10px 0 0; }
+.sources li{ font-size:0.86rem; margin-bottom:8px; color:var(--ink-soft); }
+.sources a{ color:var(--primary); word-break:break-word; }
+
 /* ---------- footer ---------- */
 footer.site{
   border-top:1px solid var(--line); margin-top:64px; padding:40px 0 32px;
