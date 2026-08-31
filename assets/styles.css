@@ -209,3 +209,31 @@ footer.site .bottom{
 .page-body h1{ font-size:2rem; }
 .page-body h2{ font-size:1.25rem; margin-top:1.8em; }
 .updated{ font-family:'IBM Plex Mono', monospace; font-size:0.76rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; }
+
+/* ---------- cookie consent banner ---------- */
+#tdoh-cookie-banner{
+  position:fixed; left:0; right:0; bottom:0; z-index:999;
+  background:var(--surface); border-top:1px solid var(--line);
+  box-shadow:0 -8px 24px rgba(0,0,0,0.08);
+  padding:16px 20px; transition:opacity 0.3s ease, transform 0.3s ease;
+}
+#tdoh-cookie-banner.tdoh-cookie-hide{ opacity:0; transform:translateY(8px); pointer-events:none; }
+.tdoh-cookie-inner{
+  max-width:1080px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:wrap;
+}
+.tdoh-cookie-inner p{ margin:0; font-size:0.86rem; color:var(--ink-soft); max-width:64ch; }
+.tdoh-cookie-inner a{ color:var(--accent-ink); }
+.tdoh-cookie-actions{ display:flex; gap:10px; flex-shrink:0; }
+.tdoh-btn{
+  font-family:inherit; font-size:0.84rem; font-weight:600; padding:9px 16px;
+  border-radius:8px; cursor:pointer; border:1px solid var(--line);
+}
+.tdoh-btn-ghost{ background:transparent; color:var(--ink-soft); }
+.tdoh-btn-ghost:hover{ background:var(--surface-2); }
+.tdoh-btn-solid{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.tdoh-btn-solid:hover{ background:var(--accent-ink); border-color:var(--accent-ink); }
+@media (max-width:640px){
+  .tdoh-cookie-inner{ flex-direction:column; align-items:stretch; }
+  .tdoh-cookie-actions{ justify-content:flex-end; }
+}
