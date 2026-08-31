@@ -1,0 +1,8 @@
+# ads.txt for TheDogOwnersHub.com
+#
+# IMPORTANT: this is a placeholder. Once your Google AdSense account is
+# approved, replace "pub-0000000000000000" below with your real AdSense
+# publisher ID (found in AdSense under Account > Account information).
+# This file MUST live at the root of the domain: https://www.thedogownershub.com/ads.txt
+#
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
