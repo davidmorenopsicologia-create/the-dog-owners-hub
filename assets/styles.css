@@ -168,16 +168,6 @@ article.post li{ margin-bottom:0.4em; }
   background:var(--accent-soft); border-radius:10px; padding:16px 20px; margin:28px 0;
   font-size:0.86rem; color:var(--ink-soft); max-width:70ch;
 }
-.affiliate-note{
-  font-size:0.82rem; color:var(--ink-soft); border-left:3px solid var(--line);
-  padding:4px 0 4px 12px; margin:4px 0 24px; max-width:70ch;
-}
-
-/* ---------- ad slots (placeholders — no ad code until AdSense is approved) ---------- */
-.ad-slot{
-  max-width:70ch; margin:28px 0; min-height:0;
-}
-.ad-slot:empty{ display:none; }
 .author-box{
   display:flex; gap:16px; align-items:flex-start;
   border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin:44px 0;
@@ -193,6 +183,32 @@ article.post li{ margin-bottom:0.4em; }
 .author-box p{ font-size:0.88rem; color:var(--ink-soft); margin:0; }
 
 .related{ margin:56px 0; }
+
+.sources{
+  border:1px solid var(--line); border-radius:var(--radius); padding:20px 22px;
+  margin:36px 0; max-width:70ch; background:var(--surface);
+}
+.sources h2{ margin-top:0 !important; font-size:1.05rem !important; }
+.sources ol{ padding-left:1.2em; margin:10px 0 0; }
+.sources li{ font-size:0.86rem; margin-bottom:8px; color:var(--ink-soft); }
+.sources a{ color:var(--primary); word-break:break-word; }
+
+.affiliate-note{
+  font-size:0.82rem; color:var(--ink-soft); border-left:3px solid var(--line);
+  padding:4px 0 4px 12px; margin:4px 0 24px; max-width:70ch;
+}
+
+/* ---------- ad slots (placeholders — no ad code until AdSense is approved) ----------
+   Positioned deliberately: one right after the intro (dense, on-topic text just above
+   and below it), one right before "Related reading" (still inside the article's own
+   topic, before the page shifts to cross-links). Both sit inside the narrow content
+   column so any unit that renders here reads as part of the article, not a sidebar
+   afterthought — this is what keeps Google's contextual match tight to the page topic.
+   Empty by default: renders as nothing until real ad markup/script is added per slot. */
+.ad-slot{
+  max-width:70ch; margin:28px 0; min-height:0;
+}
+.ad-slot:empty{ display:none; }
 
 /* ---------- footer ---------- */
 footer.site{
