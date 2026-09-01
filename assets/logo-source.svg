@@ -1,11 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="96" fill="#2F5D50"/>
-  <g fill="#F6F5EF">
-    <!-- paw print: one large pad + four toe pads -->
-    <ellipse cx="256" cy="330" rx="92" ry="78"/>
-    <ellipse cx="150" cy="230" rx="42" ry="52"/>
-    <ellipse cx="225" cy="165" rx="42" ry="54"/>
-    <ellipse cx="290" cy="165" rx="42" ry="54"/>
-    <ellipse cx="362" cy="230" rx="42" ry="52"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#356B5C"/>
+      <stop offset="1" stop-color="#20443B"/>
+    </linearGradient>
+    <linearGradient id="paw" x1="256" y1="140" x2="256" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FCFBF6"/>
+      <stop offset="1" stop-color="#EDE9DA"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#12261F" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- thin inner ring for a crafted, badge-like feel -->
+  <rect x="20" y="20" width="472" height="472" rx="96" fill="none" stroke="#F6F5EF" stroke-opacity="0.14" stroke-width="2"/>
+
+  <g filter="url(#soft)">
+    <!-- main pad: rounded, slightly wider at base, like the reference photo -->
+    <path d="M256 268
+             C 305 268 344 305 344 353
+             C 344 397 305 424 256 424
+             C 207 424 168 397 168 353
+             C 168 305 207 268 256 268 Z"
+          fill="url(#paw)"/>
+
+    <!-- toes: four asymmetric pads angled outward, echoing the real-paw reference -->
+    <ellipse cx="146" cy="243" rx="38" ry="49" fill="url(#paw)" transform="rotate(-18 146 243)"/>
+    <ellipse cx="216" cy="185" rx="39" ry="53" fill="url(#paw)" transform="rotate(-7 216 185)"/>
+    <ellipse cx="296" cy="185" rx="39" ry="53" fill="url(#paw)" transform="rotate(7 296 185)"/>
+    <ellipse cx="366" cy="243" rx="38" ry="49" fill="url(#paw)" transform="rotate(18 366 243)"/>
   </g>
+
+  <!-- subtle accent underline, nods to the site's orange accent without competing -->
+  <rect x="206" y="452" width="100" height="6" rx="3" fill="#D98A3D"/>
 </svg>
