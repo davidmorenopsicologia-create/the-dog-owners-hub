@@ -67,10 +67,38 @@ nav.primary a{
   padding:8px 12px; border-radius:8px;
 }
 nav.primary a:hover{ background:var(--primary-soft); color:var(--primary-ink); }
+
+/* hamburger button — hidden on desktop, shown on mobile */
+.nav-toggle{
+  display:none; width:44px; height:44px; flex:none;
+  border:1px solid var(--line); border-radius:8px; background:var(--surface);
+  cursor:pointer; padding:0;
+  flex-direction:column; align-items:center; justify-content:center; gap:5px;
+}
+.nav-toggle span{
+  display:block; width:20px; height:2px; background:var(--ink);
+  border-radius:2px; transition:transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
 @media (max-width:900px){
-  header.site .bar{ flex-direction:column; align-items:flex-start; gap:10px; }
-  nav.primary{ gap:2px; }
-  nav.primary a{ padding:6px 9px; font-size:0.82rem; }
+  header.site .bar{ flex-wrap:nowrap; position:relative; }
+  .nav-toggle{ display:flex; }
+  nav.primary{
+    display:none; flex-direction:column; gap:2px;
+    position:absolute; left:0; right:0; top:100%;
+    background:var(--surface); border-bottom:1px solid var(--line);
+    padding:10px 16px 18px; box-shadow:0 14px 28px rgba(32,38,43,0.1);
+    max-height:calc(100vh - 64px); overflow-y:auto;
+  }
+  nav.primary.nav-open{ display:flex; }
+  nav.primary a{
+    padding:12px 10px; font-size:0.98rem; border-radius:8px;
+    min-height:44px; display:flex; align-items:center;
+  }
+  nav.primary a:active{ background:var(--primary-soft); }
 }
 
 /* ---------- hero ---------- */
@@ -262,4 +290,31 @@ footer.site .bottom{
 @media (max-width:640px){
   .tdoh-cookie-inner{ flex-direction:column; align-items:stretch; }
   .tdoh-cookie-actions{ justify-content:flex-end; }
+  .tdoh-btn{ min-height:44px; padding:10px 16px; }
+}
+
+/* ---------- mobile readability & touch-target tuning ---------- */
+@media (max-width:600px){
+  .wrap, .wrap-narrow{ padding:0 18px; }
+  .hero{ padding:36px 0 28px; }
+  .hero h1{ font-size:1.9rem; max-width:100%; }
+  .hero p.lede{ font-size:1rem; }
+  article.post h1{ font-size:1.65rem; max-width:100%; }
+  article.post h2{ font-size:1.22rem; }
+  article.post h3{ font-size:1.05rem; }
+  .post-hero{ height:200px; margin:16px 0 28px; }
+  .section-head{ flex-direction:column; align-items:flex-start; gap:6px; margin:36px 0 16px; }
+  .section-head h2{ font-size:1.3rem; }
+  .article-card .thumb{ height:170px; }
+  .cat-card{ padding:16px; }
+  footer.site .cols{ gap:28px; }
+  footer.site .links{ gap:28px 32px; }
+  .author-box{ flex-direction:column; }
+}
+
+/* comfortable minimum tap targets across common interactive elements */
+@media (max-width:900px){
+  .cat-card, .article-card{ -webkit-tap-highlight-color:rgba(47,93,80,0.12); }
+  footer.site .links a{ padding:4px 0; min-height:32px; }
+  .section-head a{ display:inline-block; padding:6px 0; }
 }
