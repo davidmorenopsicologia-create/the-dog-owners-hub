@@ -198,6 +198,18 @@ article.post li{ margin-bottom:0.4em; }
   padding:4px 0 4px 12px; margin:4px 0 24px; max-width:70ch;
 }
 
+/* ---------- ad slots (placeholders — no ad code until AdSense is approved) ----------
+   Positioned deliberately: one right after the intro (dense, on-topic text just above
+   and below it), one right before "Related reading" (still inside the article's own
+   topic, before the page shifts to cross-links). Both sit inside the narrow content
+   column so any unit that renders here reads as part of the article, not a sidebar
+   afterthought — this is what keeps Google's contextual match tight to the page topic.
+   Empty by default: renders as nothing until real ad markup/script is added per slot. */
+.ad-slot{
+  max-width:70ch; margin:28px 0; min-height:0;
+}
+.ad-slot:empty{ display:none; }
+
 /* ---------- footer ---------- */
 footer.site{
   border-top:1px solid var(--line); margin-top:64px; padding:40px 0 32px;
