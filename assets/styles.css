@@ -172,6 +172,12 @@ article.post li{ margin-bottom:0.4em; }
   font-size:0.82rem; color:var(--ink-soft); border-left:3px solid var(--line);
   padding:4px 0 4px 12px; margin:4px 0 24px; max-width:70ch;
 }
+
+/* ---------- ad slots (placeholders — no ad code until AdSense is approved) ---------- */
+.ad-slot{
+  max-width:70ch; margin:28px 0; min-height:0;
+}
+.ad-slot:empty{ display:none; }
 .author-box{
   display:flex; gap:16px; align-items:flex-start;
   border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin:44px 0;
