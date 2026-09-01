@@ -29,7 +29,9 @@ El gráfico siguiente ilustra cómo se ve ese progreso en un caso real: el umbra
 de forma lineal ni constante — hay sesiones donde se mantiene igual, y eso es
 completamente normal, no un estancamiento.
 
-![Gráfico mostrando cómo el umbral de distancia baja de 12 a 3 metros a lo largo de 8 sesiones de exposición gradual](assets/umbral-de-distancia-reactividad.png)
+![Gráfico mostrando cómo el umbral de distancia baja de 12 a 3 metros a lo largo de 8 sesiones de exposición gradual](assets/distance-threshold-reactivity.png)
+
+*(El texto dentro de la imagen va siempre en inglés, según acordamos, independientemente del idioma del módulo.)*
 
 **Ejercicio: encuentra el umbral real de tu perro.** En un paseo controlado, acércate
 lentamente al tipo de detonante que le afecta (otro perro tranquilo con su dueño, por
