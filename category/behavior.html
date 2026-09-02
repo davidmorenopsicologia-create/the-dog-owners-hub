@@ -95,7 +95,19 @@
 
 <footer class="site">
   <div class="wrap">
-    <div class="cols">
+  <div class="newsletter-box">
+    <h3>Get new guides in your inbox</h3>
+    <p>Practical, science-based dog care — every couple of weeks, no spam. Join and get our free New Puppy Checklist instantly.</p>
+    <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="../thank-you-newsletter.html" data-newsletter>
+      <input type="hidden" name="form-name" value="newsletter">
+      <p style="position:absolute; left:-9999px;" aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="newsletter-msg" role="status" aria-live="polite"></div>
+    <p class="fine">No spam, unsubscribe anytime. See our <a href="../privacy-policy.html">Privacy Policy</a>.</p>
+  </div>
+      <div class="cols">
       <div class="brand">
         <a href="../index.html" class="logo">The Dog <span>Owners</span> Hub</a>
         <p>Practical, science-informed guides for dog owners at every stage of their dog's life.</p>
@@ -123,6 +135,7 @@
   </div>
 </footer>
 <script src="../assets/nav.js" defer></script>
+<script src="../assets/newsletter.js" defer></script>
 <script src="../assets/cookie-consent.js" defer></script>
 </body>
 </html>
