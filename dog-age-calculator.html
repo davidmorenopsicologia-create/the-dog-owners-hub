@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dog Age Calculator: Your Dog's Real Age in Human Years — The Dog Owners Hub</title>
+<meta name="description" content="A free dog age calculator based on published aging research, not the outdated 'multiply by 7' rule — adjusted for your dog's size, from puppy to senior.">
+<link rel="canonical" href="https://www.thedogownershub.com/dog-age-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dog Age Calculator — The Dog Owners Hub">
+<meta property="og:description" content="Find your dog's real age in human years, adjusted for size — based on published aging research, not the old 'multiply by 7' myth.">
+<meta property="og:url" content="https://www.thedogownershub.com/dog-age-calculator.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the 'multiply by 7' rule accurate for dog years?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The x7 rule is a popular myth with no scientific basis. Dogs mature much faster than humans in their first two years and then age at a rate that depends heavily on their adult size, which a flat x7 multiplier cannot capture." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a dog's real human-equivalent age calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This calculator uses the logarithmic formula from a 2020 epigenetic aging study (human age = 16 × ln(dog age) + 31), which compares DNA methylation patterns between dogs and humans, then adjusts for the dog's adult size category since larger breeds age faster after early adulthood." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do larger dogs age faster than smaller dogs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Large and giant breeds grow faster and reach physical maturity sooner, but that accelerated growth is linked to shorter lifespans and earlier onset of age-related changes, typically starting around 5-6 years old. Small and toy breeds tend to stay biologically younger for longer." }
+    }
+  ]
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1098991553083258" crossorigin="anonymous"></script>
+</head>
+<body data-base="">
+<header class="site">
+  <div class="bar">
+    <a href="index.html" class="logo">The Dog <span>Owners</span> Hub</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary" id="primaryNav">
+      <a href="category/training.html">Training</a>
+      <a href="category/behavior.html">Behavior</a>
+      <a href="category/care.html">Care &amp; Wellbeing</a>
+      <a href="category/gear.html">Gear Reviews</a>
+      <a href="category/breeds.html">Breeds &amp; Multi-Dog</a>
+      <a href="category/psychology.html">Dog Psychology</a>
+      <a href="dog-age-calculator.html" class="nav-tool" aria-current="page">Age Calculator</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap-narrow page-body">
+  <span class="mono" style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent-ink); display:block; margin-bottom:8px;">Free tool</span>
+  <h1>Dog Age Calculator</h1>
+  <p>Forget "multiply by 7" — it was never based on real science. This calculator uses the logarithmic formula from a 2020 canine epigenetic aging study, adjusted for your dog's adult size, because a Chihuahua and a Great Dane do not age at the same rate.</p>
+
+  <div class="calc-tool" id="ageCalc">
+    <div class="field-row">
+      <div class="field">
+        <label for="dogAge">Your dog's age <span class="hint">(years, decimals ok — e.g. 2.5)</span></label>
+        <input type="number" id="dogAge" min="0" max="25" step="0.1" placeholder="e.g. 3" inputmode="decimal">
+      </div>
+      <div class="field">
+        <label for="dogSize">Adult size</label>
+        <select id="dogSize">
+          <option value="small">Toy / Small — up to 20 lb (9 kg)</option>
+          <option value="medium" selected>Medium — 21–50 lb (10–23 kg)</option>
+          <option value="large">Large — 51–90 lb (23–41 kg)</option>
+          <option value="giant">Giant — over 90 lb (41+ kg)</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" id="calcBtn">Calculate human age</button>
+
+    <div class="calc-result" id="calcResult" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="ad-slot ad-slot--in-article" data-ad-position="after-tool" aria-hidden="true"></div>
+
+  <h2>Why the "multiply by 7" rule is wrong</h2>
+  <p>The x7 rule assumes a constant aging rate across a dog's whole life and ignores size entirely — neither holds up. A one-year-old dog isn't a human toddler; most breeds are already sexually mature and physically closer to a human in their late teens to late twenties, depending on size. And a dog's later years compress far more aging into each calendar year than the first ones did.</p>
+
+  <h2>The formula this calculator uses</h2>
+  <p>For dogs one year and older, the base calculation comes from a 2020 study published in <em>Cell Systems</em>, which compared DNA methylation changes (a molecular marker of biological aging) in Labrador Retrievers to those in humans: <strong>human age = 16 × ln(dog age) + 31</strong>. That formula alone tracks a medium-sized dog reasonably well. This calculator then adjusts it for adult size, since size is the single biggest factor in how fast a dog ages after early adulthood — toy and small breeds tend to stay biologically younger for longer, while large and giant breeds enter their senior years noticeably earlier.</p>
+  <p>For puppies under one year old, a single number would suggest false precision the science doesn't support — so the calculator shows the developmental stage instead (see below).</p>
+
+  <h2>Puppy stages (under 1 year)</h2>
+  <p>Roughly, regardless of size: 0–2 months is the newborn/infant stage; 2–4 months is toddler-like, with rapid learning and teething; 4–6 months brings the "gawky adolescent" growth spurt and the start of sexual maturity for many breeds; 6–12 months is closer to a human teenager — physically capable but not yet fully mature, especially in large and giant breeds, which can take up to 18–24 months to finish growing.</p>
+
+  <h2>Why size changes the answer so much</h2>
+  <p>Large and giant breeds grow faster and reach physical size sooner, but that accelerated development trades off against longevity — they tend to show age-related changes earlier, often from around 5–6 years old, and have shorter average lifespans than small breeds. A small or toy breed at age 10 is often still active and closer to late-middle-age; a giant breed at the same calendar age is typically well into its senior years. This is also why "senior dog" guidance (see our <a href="articles/caring-for-a-senior-dog.html">complete guide to caring for a senior dog</a>) usually gives a size-adjusted age range rather than one number for all dogs.</p>
+
+  <h2>Frequently asked questions</h2>
+  <p><strong>Is this exact?</strong> No calculator is — individual health, breed, neuter status, and genetics all affect aging rate. Treat the result as a well-informed estimate, not a medical fact, and talk to your vet about what matters for your specific dog.</p>
+  <p><strong>Does neutering or spaying affect the result?</strong> It can slightly affect growth and lifespan in some breeds, but there isn't a reliable formula to adjust for it, so this calculator doesn't attempt to.</p>
+  <p><strong>My mixed-breed dog's size is in between two categories — which do I pick?</strong> Use their actual adult weight rather than guessing by breed name; weight is what drives the aging-rate difference, not the label.</p>
+
+  <div class="ad-slot ad-slot--in-article" data-ad-position="before-related" aria-hidden="true"></div>
+
+  <h2>Related reading</h2>
+  <p>
+    <a href="articles/caring-for-a-senior-dog.html">Caring for a Senior Dog: A Complete Guide</a> ·
+    <a href="articles/how-your-dogs-needs-change-with-age.html">How Your Dog's Needs Change as They Age</a> ·
+    <a href="category/care.html">More on Care &amp; Wellbeing</a>
+  </p>
+
+  <div class="author-box" style="margin-top:40px; padding-top:24px; border-top:1px solid var(--line); display:flex; gap:16px; align-items:flex-start;">
+    <div>
+      <p style="margin:0; font-weight:600;">Written by David Moreno</p>
+      <p style="margin:2px 0 0; color:var(--ink-soft); font-size:0.92rem;">Licensed psychologist (Psicólogo General Sanitario, Spain), writing on behavior science and animal welfare research. See our <a href="about.html">editorial approach</a>.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand">
+        <a href="index.html" class="logo">The Dog <span>Owners</span> Hub</a>
+        <p>Practical, science-informed guides for dog owners at every stage of their dog's life.</p>
+      </div>
+      <div class="links">
+        <div>
+          <h4>Topics</h4>
+          <a href="category/training.html">Training</a>
+          <a href="category/behavior.html">Behavior</a>
+          <a href="category/care.html">Care &amp; Wellbeing</a>
+          <a href="category/gear.html">Gear Reviews</a>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <a href="dog-age-calculator.html">Age Calculator</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="#" data-tdoh-manage-cookies>Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">© 2026 The Dog Owners Hub. All rights reserved. Content is for informational purposes only and is not a substitute for professional veterinary care.</div>
+  </div>
+</footer>
+<script src="assets/nav.js" defer></script>
+<script src="assets/cookie-consent.js" defer></script>
+<script>
+(function(){
+  var btn = document.getElementById('calcBtn');
+  var ageInput = document.getElementById('dogAge');
+  var sizeSelect = document.getElementById('dogSize');
+  var result = document.getElementById('calcResult');
+  if(!btn) return;
+
+  var perYearAfterFive = { small:4, medium:5, large:6, giant:8 };
+  var sizeLabel = { small:'toy/small', medium:'medium', large:'large', giant:'giant' };
+
+  var puppyStages = [
+    { max:2, text:"newborn stage — completely dependent, senses still developing." },
+    { max:4, text:"toddler stage — mobile, curious, and teething." },
+    { max:6, text:"young-child stage — a growth spurt, and the start of sexual maturity in many breeds." },
+    { max:12, text:"teenager stage — physically capable but not fully mature, especially in large and giant breeds." }
+  ];
+
+  function calculate(){
+    var age = parseFloat(ageInput.value);
+    var size = sizeSelect.value;
+    if(isNaN(age) || age < 0){
+      result.innerHTML = '<p>Enter your dog\'s age in years to see the result.</p>';
+      result.classList.add('show');
+      return;
+    }
+    if(age < 1){
+      var months = Math.round(age * 12);
+      var stage = puppyStages[puppyStages.length - 1];
+      for(var i = 0; i < puppyStages.length; i++){
+        if(months <= puppyStages[i].max){ stage = puppyStages[i]; break; }
+      }
+      result.innerHTML = '<div class="big">' + months + ' months old<br><span>roughly a human ' + stage.text + '</span></div>' +
+        '<p>Puppies under a year develop too fast and unevenly for a single "human years" number to mean much — the developmental stage is more useful here.</p>';
+      result.classList.add('show');
+      return;
+    }
+    var base = 16 * Math.log(age) + 31;
+    var humanAge;
+    if(age <= 5){
+      humanAge = base;
+    } else {
+      var baseAtFive = 16 * Math.log(5) + 31;
+      humanAge = baseAtFive + (age - 5) * perYearAfterFive[size];
+    }
+    humanAge = Math.round(humanAge);
+    result.innerHTML = '<div class="big">≈ ' + humanAge + ' <span>human years old</span></div>' +
+      '<p>Based on a ' + age + '-year-old ' + sizeLabel[size] + '-breed dog. This is a well-informed estimate from published aging research, not an exact figure — individual health and genetics matter too.</p>';
+    result.classList.add('show');
+  }
+
+  btn.addEventListener('click', calculate);
+  ageInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ calculate(); } });
+})();
+</script>
+</body>
+</html>
