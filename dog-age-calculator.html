@@ -79,7 +79,7 @@
         <input type="number" id="dogAge" min="0" max="25" step="0.1" placeholder="e.g. 3" inputmode="decimal">
       </div>
       <div class="field">
-        <label for="dogSize">Adult size</label>
+        <label for="dogSize">Adult size <span class="hint">(only changes the result after age 5)</span></label>
         <select id="dogSize">
           <option value="small">Toy / Small — up to 20 lb (9 kg)</option>
           <option value="medium" selected>Medium — 21–50 lb (10–23 kg)</option>
@@ -220,8 +220,11 @@
       humanAge = baseAtFive + (age - 5) * perYearAfterFive[size];
     }
     humanAge = Math.round(humanAge);
+    var sizeNote = (age <= 5)
+      ? 'Breed size doesn\'t change this estimate yet — it starts affecting aging speed after age 5.'
+      : 'Based on a ' + sizeLabel[size] + '-breed dog. Larger breeds age faster after early adulthood.';
     result.innerHTML = '<div class="big">≈ ' + humanAge + ' <span>human years old</span></div>' +
-      '<p>Based on a ' + age + '-year-old ' + sizeLabel[size] + '-breed dog. This is a well-informed estimate from published aging research, not an exact figure — individual health and genetics matter too.</p>';
+      '<p>For a ' + age + '-year-old dog. ' + sizeNote + ' This is a well-informed estimate from published aging research, not an exact figure — individual health and genetics matter too.</p>';
     result.classList.add('show');
   }
 
